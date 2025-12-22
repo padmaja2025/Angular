@@ -14,6 +14,7 @@ export class ProductComponent {
   @Input () price!:number;
   
   @Output() myEvent = new EventEmitter<number>();
+  @Output() myEvent2 = new EventEmitter<any>();
   constructor()
   {
     this.product = new  Product(100,"Mobilie",25000);
@@ -24,8 +25,11 @@ export class ProductComponent {
    this.product.name = this.name;
     this.product.price= this.price;
   } 
-  generateevent=():void =>{
-    this.myEvent.emit(this.product.price);
+  generateevent=(data:number):void =>{
+    this.myEvent.emit(data);
+  }
+  generateevent2=(data:number):void =>{
+    this.myEvent.emit(data);
   }
   f1=():void =>{
   this.product.price += 1000;

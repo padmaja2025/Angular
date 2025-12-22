@@ -18,4 +18,8 @@ export class App {
   parentfun=(num:number):void => {
     console.log("Event received in parent component"+num);
   }
+
+  parentfun2=(childEventObj:any):void => {
+    console.log("Event received in parent component"+childEventObj.data);
+  }
 }
