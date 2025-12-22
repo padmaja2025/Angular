@@ -1,1 +1,20 @@
-<p>product works!</p>
+
+
+        
+     
+     <h1> this is product</h1>
+
+<div fxLayout="row wrap"
+     fxLayoutAlign="center start"
+     fxLayoutGap="24px">
+  <div >
+    <div class="product-card">
+      
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p>{{ product.price }}</p>
+      <p [style.color]="product.InStock ? 'green' : 'red'">{{ product.InStock ? 'In stock' : 'Out of Stock' }}</p>
+      <button>Add To Cart</button>
+    </div>
+  </div>
+</div>
